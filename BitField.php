@@ -12,7 +12,7 @@
     {
       if (array_key_exists($action, $this->roles))
       {
-        return (($this->permission & $this->roles[$action]) > 0);
+        return (($this->permission & $this->roles[$action]) == $this->roles[$action]);
       }
       return FALSE;
     }
